@@ -1,0 +1,36 @@
+object FormReadingsOperations: TFormReadingsOperations
+  Left = 455
+  Height = 500
+  Top = 231
+  Width = 765
+  Caption = 'Readings Operations'
+  ClientHeight = 500
+  ClientWidth = 765
+  LCLVersion = '2.2.6.0'
+  object BtnSaveReading: TButton
+    Left = 40
+    Height = 35
+    Top = 344
+    Width = 158
+    Caption = 'Save Reading'
+    TabOrder = 0
+  end
+  object BtnLoadReading: TButton
+    Left = 288
+    Height = 35
+    Top = 344
+    Width = 160
+    Caption = 'Load Reading'
+    TabOrder = 1
+  end
+  object Memo1: TMemo
+    Left = 40
+    Height = 298
+    Top = 24
+    Width = 496
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 2
+  end
+end

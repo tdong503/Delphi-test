@@ -1,0 +1,55 @@
+object JOIEnergyForm: TJOIEnergyForm
+  Left = 948
+  Height = 500
+  Top = 264
+  Width = 765
+  Caption = 'Main'
+  ClientHeight = 500
+  ClientWidth = 765
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object MemoReadingsInfo: TMemo
+    Left = 34
+    Height = 322
+    Top = 32
+    Width = 544
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 0
+  end
+  object BtnCompareAll: TButton
+    Left = 34
+    Height = 33
+    Top = 373
+    Width = 158
+    Caption = 'Compare All'
+    TabOrder = 1
+  end
+  object BtnRecomand: TButton
+    Left = 34
+    Height = 33
+    Top = 416
+    Width = 158
+    Caption = 'Recomand'
+    TabOrder = 2
+  end
+  object TxtRecomandCount: TEdit
+    Left = 200
+    Height = 25
+    Top = 424
+    Width = 40
+    TabOrder = 3
+    Text = '0'
+  end
+  object BtnGoToReadings: TButton
+    Left = 504
+    Height = 33
+    Top = 448
+    Width = 238
+    Caption = 'Go To Readings Operation Page'
+    Color = clMenuHighlight
+    OnClick = BtnGoToReadingsClick
+    TabOrder = 4
+  end
+end

@@ -1,0 +1,111 @@
+object FormReadingsOperations: TFormReadingsOperations
+  Left = 591
+  Height = 500
+  Top = 199
+  Width = 756
+  Caption = 'Readings Operations'
+  ClientHeight = 500
+  ClientWidth = 756
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object BtnShowReadings: TButton
+    Left = 72
+    Height = 41
+    Top = 376
+    Width = 163
+    Caption = 'Show Readings'
+    OnClick = BtnShowReadingsClick
+    TabOrder = 0
+  end
+  object BtnSaveReadings: TButton
+    Left = 272
+    Height = 40
+    Top = 376
+    Width = 179
+    Caption = 'Save Readings'
+    OnClick = BtnSaveReadingsClick
+    TabOrder = 1
+  end
+  object MemoReadingsDetails: TMemo
+    Left = 72
+    Height = 264
+    Top = 72
+    Width = 405
+    Lines.Strings = (
+      'MemoReadingsDetails'
+    )
+    TabOrder = 2
+  end
+  object SmartMeterId: TLabel
+    Left = 512
+    Height = 17
+    Top = 72
+    Width = 92
+    Caption = 'Smart Meter Id:'
+    ParentColor = False
+  end
+  object Reading: TLabel
+    Left = 512
+    Height = 17
+    Top = 192
+    Width = 51
+    Caption = 'Reading:'
+    ParentColor = False
+  end
+  object Date: TLabel
+    Left = 512
+    Height = 17
+    Top = 232
+    Width = 30
+    Caption = 'Date:'
+    ParentColor = False
+  end
+  object CboxSmartMetersList: TComboBox
+    Left = 616
+    Height = 25
+    Top = 72
+    Width = 100
+    ItemHeight = 17
+    TabOrder = 3
+    Text = 'CboxSmartMetersList'
+  end
+  object TxtReading: TEdit
+    Left = 584
+    Height = 25
+    Top = 184
+    Width = 80
+    TabOrder = 4
+  end
+  object dtkReadingDate: TDateTimePicker
+    Left = 584
+    Height = 25
+    Top = 224
+    Width = 91
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 5
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 45100
+    Time = 0.923845416669792
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object BtnGoToMain: TButton
+    Left = 552
+    Height = 40
+    Top = 376
+    Width = 179
+    Caption = 'Go to main'
+    Color = clMenuHighlight
+    OnClick = BtnGoToMainClick
+    TabOrder = 6
+  end
+end

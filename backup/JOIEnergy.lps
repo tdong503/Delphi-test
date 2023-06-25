@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="JOIEnergy.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="45"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Src\main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="JOIEnergyForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Main"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="10"/>
+        <CursorPos X="44" Y="41"/>
+        <UsageCount Value="45"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormReadingsOperations"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ReadingsOperations"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="67" Y="8"/>
+        <UsageCount Value="45"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Src\fromreadingsoperations.pas"/>
+        <ComponentName Value="FormReadingsOperations"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FromReadingsOperations"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="31" Y="6"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Src\fromreadingsoperations.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="22" Y="27"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3204"/>
+        <CursorPos X="56" Y="3217"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\lazutils\lazmethodlist.pas"/>
+        <UnitName Value="LazMethodList"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="296"/>
+        <CursorPos Y="335"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7945"/>
+        <CursorPos Y="7966"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2156"/>
+        <CursorPos Y="2177"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="144" Column="65" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="145" Column="33" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="146" Column="14" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="140" Column="30" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\main.pas"/>
+        <Caret Line="38" Column="31" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="146" Column="35" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="147" Column="17" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\main.pas"/>
+        <Caret Line="23" Column="67" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\main.pas"/>
+        <Caret Line="39" Column="36" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\main.pas"/>
+        <Caret Line="20" Column="25" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\main.pas"/>
+        <Caret Line="39" Column="36" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="147" Column="45" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="37" Column="53" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="40" Column="25" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="147" Column="45" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="40" Column="25" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="149" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="134" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="135" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="137" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="135" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="137" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="135" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="137" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="135" Column="34" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="149" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="135" Column="22" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="149" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="158" Column="21" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="Src\readingsoperations.pas"/>
+        <Caret Line="8" Column="78"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default">
+        <Mode Name="default"/>
+      </Modes>
+    </RunParams>
+    <HistoryLists>
+      <List Name="LaunchingApplication" Type="File" Count="1">
+        <Item1 Value="C:\WINDOWS\system32\cmd.exe /C ${TargetCmdLine}"/>
+      </List>
+    </HistoryLists>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Src\readingsoperations.pas"/>
+        <Line Value="149"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

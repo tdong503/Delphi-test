@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1449427374"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -gl -WG -l -vewnhibq -FiC:\TempProject\JOI\lib\x86_64-win64 -FuC:\TempProject\JOI\Src -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\components\datetimectrls\lib\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\components\freetype\lib\x86_64-win64 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\packager\units\x86_64-win64 -FuC:\TempProject\JOI\ -FUC:\TempProject\JOI\lib\x86_64-win64\ -FEC:\TempProject\JOI\ -oC:\TempProject\JOI\JOIEnergy.exe -dLCL -dLCLwin32 JOIEnergy.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>
