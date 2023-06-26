@@ -5,7 +5,7 @@ unit ReadingsOperations;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, REST.Json,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
   DateUtils, DateTimePicker;
 
 type
@@ -153,14 +153,14 @@ procedure TFormReadingsOperations.BtnSaveReadingsClick(Sender: TObject);
 var
   i,
   arrayLength: integer;
-  ElectricityReadingsArray: TElectricityReadingsArray;
 begin
   for i:=0 to Length(MeterReadingsArray)-1 do
   begin
     if MeterReadingsArray[i].smartMeterId = CboxSmartMetersList.Text then
     begin
-       arrayLength:=SizeOf(MeterReadingsArray[i].ElectricityReadings);
+       arrayLength:=Length(MeterReadingsArray[i].ElectricityReadings);
        SetLength(MeterReadingsArray[i].ElectricityReadings, arrayLength+1);
+       MeterReadingsArray[i].ElectricityReadings[arrayLength]:= ElectricityReading.Create;
        MeterReadingsArray[i].ElectricityReadings[arrayLength].reading:=StrToFloat(TxtReading.Text);
        MeterReadingsArray[i].ElectricityReadings[arrayLength].time:=DateToStr(dtkReadingDate.DateTime);
     end;
@@ -170,11 +170,21 @@ end;
 procedure TFormReadingsOperations.BtnShowReadingsClick(Sender: TObject);
 var
   i: Integer;
+  j: Integer;
 begin
+  MemoReadingsDetails.Clear;
   ReadData(MeterReadingsArray);
   for i:= Low(MeterReadingsArray) to High(MeterReadingsArray) do
   begin
-    MemoReadingsDetails.Append('SmartMeterId:' + MeterReadingsArray[i].smartMeterId);
+    for j:= Low(MeterReadingsArray[i].ElectricityReadings) to High(MeterReadingsArray[i].ElectricityReadings) do
+    begin
+      if j = 0 then
+      begin
+         MemoReadingsDetails.Append('----------------------');
+      end;
+      MemoReadingsDetails.Append('SmartMeterId: ' + MeterReadingsArray[i].smartMeterId +
+      ' --- Reading: ' + FloatToStr(MeterReadingsArray[i].ElectricityReadings[j].reading) + ' ' + MeterReadingsArray[i].ElectricityReadings[j].time);
+    end;
   end;
 end;
 

@@ -17,6 +17,8 @@ type
     BtnCompareAll: TButton;
     TxtRecomandCount: TEdit;
     MemoReadingsInfo: TMemo;
+    procedure BtnCompareAllClick(Sender: TObject);
+    procedure BtnRecomandClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure BtnGoToReadingsClick(Sender: TObject);
   private
@@ -30,7 +32,7 @@ var
 
 implementation
 uses
-  ReadingsOperations;
+  ReadingsOperations, PricePlan;
 
 {$R *.lfm}
 
@@ -38,8 +40,18 @@ uses
 
 procedure TJOIEnergyForm.FormCreate(Sender: TObject);
 begin
-  ShowMessage(FloatToStr(CompilerVersion));
   ReadingsOperations.InitData();
+  PricePlan.InitMapping();
+end;
+
+procedure TJOIEnergyForm.BtnCompareAllClick(Sender: TObject);
+begin
+
+end;
+
+procedure TJOIEnergyForm.BtnRecomandClick(Sender: TObject);
+begin
+
 end;
 
 procedure TJOIEnergyForm.BtnGoToReadingsClick(Sender: TObject);

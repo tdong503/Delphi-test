@@ -24,6 +24,7 @@ object JOIEnergyForm: TJOIEnergyForm
     Top = 373
     Width = 158
     Caption = 'Compare All'
+    OnClick = BtnCompareAllClick
     TabOrder = 1
   end
   object BtnRecomand: TButton
@@ -32,6 +33,7 @@ object JOIEnergyForm: TJOIEnergyForm
     Top = 416
     Width = 158
     Caption = 'Recomand'
+    OnClick = BtnRecomandClick
     TabOrder = 2
   end
   object TxtRecomandCount: TEdit

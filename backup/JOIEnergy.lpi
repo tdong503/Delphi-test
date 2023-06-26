@@ -53,6 +53,16 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ReadingsOperations"/>
       </Unit>
+      <Unit>
+        <Filename Value="Src\priceplan.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PricePlan"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Src\constdata.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ConstData"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

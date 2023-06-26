@@ -34,6 +34,7 @@ object FormReadingsOperations: TFormReadingsOperations
     Lines.Strings = (
       'MemoReadingsDetails'
     )
+    ScrollBars = ssAutoBoth
     TabOrder = 2
   end
   object SmartMeterId: TLabel
