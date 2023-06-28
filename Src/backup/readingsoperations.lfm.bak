@@ -8,26 +8,34 @@ object FormReadingsOperations: TFormReadingsOperations
   ClientWidth = 756
   OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
+  object SaveReadingGroupBox: TGroupBox
+    Left = 479
+    Height = 332
+    Top = 36
+    Width = 265
+    Caption = 'Save Reading'
+    TabOrder = 7
+  end
   object BtnShowReadings: TButton
-    Left = 72
+    Left = 40
     Height = 41
-    Top = 376
+    Top = 352
     Width = 163
     Caption = 'Show Readings'
     OnClick = BtnShowReadingsClick
     TabOrder = 0
   end
   object BtnSaveReadings: TButton
-    Left = 272
+    Left = 496
     Height = 40
-    Top = 376
+    Top = 280
     Width = 179
-    Caption = 'Save Readings'
+    Caption = 'Save'
     OnClick = BtnSaveReadingsClick
     TabOrder = 1
   end
   object MemoReadingsDetails: TMemo
-    Left = 72
+    Left = 40
     Height = 264
     Top = 72
     Width = 405
@@ -38,7 +46,7 @@ object FormReadingsOperations: TFormReadingsOperations
     TabOrder = 2
   end
   object SmartMeterId: TLabel
-    Left = 512
+    Left = 496
     Height = 17
     Top = 72
     Width = 92
@@ -46,7 +54,7 @@ object FormReadingsOperations: TFormReadingsOperations
     ParentColor = False
   end
   object Reading: TLabel
-    Left = 512
+    Left = 496
     Height = 17
     Top = 192
     Width = 51
@@ -54,7 +62,7 @@ object FormReadingsOperations: TFormReadingsOperations
     ParentColor = False
   end
   object Date: TLabel
-    Left = 512
+    Left = 496
     Height = 17
     Top = 232
     Width = 30
@@ -62,23 +70,23 @@ object FormReadingsOperations: TFormReadingsOperations
     ParentColor = False
   end
   object CboxSmartMetersList: TComboBox
-    Left = 616
+    Left = 600
     Height = 25
     Top = 72
-    Width = 100
+    Width = 136
     ItemHeight = 17
     TabOrder = 3
     Text = 'CboxSmartMetersList'
   end
   object TxtReading: TEdit
-    Left = 584
+    Left = 568
     Height = 25
     Top = 184
     Width = 80
     TabOrder = 4
   end
   object dtkReadingDate: TDateTimePicker
-    Left = 584
+    Left = 568
     Height = 25
     Top = 224
     Width = 91
@@ -100,9 +108,9 @@ object FormReadingsOperations: TFormReadingsOperations
     MonthNames = 'Long'
   end
   object BtnGoToMain: TButton
-    Left = 552
+    Left = 557
     Height = 40
-    Top = 376
+    Top = 432
     Width = 179
     Caption = 'Go to main'
     Color = clMenuHighlight

@@ -15,6 +15,7 @@ type
     BtnGoToReadings: TButton;
     BtnRecomand: TButton;
     BtnCompareAll: TButton;
+    CboxSmartMetersList: TComboBox;
     TxtRecomandCount: TEdit;
     MemoReadingsInfo: TMemo;
     procedure BtnCompareAllClick(Sender: TObject);
@@ -39,19 +40,35 @@ uses
 { TJOIEnergyForm }
 
 procedure TJOIEnergyForm.FormCreate(Sender: TObject);
+var
+i:Integer;
 begin
   ReadingsOperations.InitData();
   PricePlan.InitMapping();
+
+  for i:=0 to Length(ConstData.SmartMeterIds)-1 do
+  begin
+     CboxSmartMetersList.Items.AddObject(ConstData.SmartMeterIds[i], TObject(ConstData.SmartMeterIds[i]));
+  end;
+  CboxSmartMetersList.ItemIndex:=0;
 end;
 
 procedure TJOIEnergyForm.BtnCompareAllClick(Sender: TObject);
+var
+  supplierToCost : TSupplierToCost;
 begin
+  supplierToCost:= PricePlan.GetConsumptionCostOfElectricityReadingsForEachPricePlan(CboxSmartMetersList.Text);
 
+  // display in memo
 end;
 
 procedure TJOIEnergyForm.BtnRecomandClick(Sender: TObject);
+var
+  supplierToCost : TSupplierToCost;
 begin
+  supplierToCost:= PricePlan.RecommendCheapestPricePlans(CboxSmartMetersList.Text, StrToInt(TxtRecomandCount.Text));
 
+  // display in memo
 end;
 
 procedure TJOIEnergyForm.BtnGoToReadingsClick(Sender: TObject);

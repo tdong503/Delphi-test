@@ -5,45 +5,69 @@ unit PricePlan;
 interface
 
 uses
-  Classes, SysUtils, ReadingsOperations, DateUtils;
+  Classes, SysUtils, ReadingsOperations, DateUtils, TypInfo;
 
 type
   TSupplier = (DrEvilsDarkEnergy, TheGreenEco, PowerForEveryone);
 
   TSmartMeterToPricePlanAccounts = record
     smartMeterId: String;
-    supplier: TSupplier;
+    supplier: string;
+  end;
+
+  TSupplierToCost = record
+    supplier: string;
+    cost: Double;
   end;
 
   TCostPerPricePlan = Array of TSmartMeterToPricePlanAccounts;
 
-  TPricePlan = record
-    energySupplier: TSupplier;
+  TPricePlan = class
+    energySupplier: string;
     unitRate: Double;
   end;
 
+  TPricePlanArray = Array[0..2] of TPricePlan;
+
 var
-   pricePlanInfo: TPricePlan;
+   pricePlanArrayInfo: TPricePlanArray;
 
 procedure InitMapping();
+function GetConsumptionCostOfElectricityReadingsForEachPricePlan(smartMeterId: String): TSupplierToCost;
+function RecommendCheapestPricePlans(smartMeterId: String; limit: Integer): TSupplierToCost;
 
 implementation
 uses
   ConstData;
 
 procedure InitMapping;
+var
+   i: Integer;
 begin
-
+  for i:= 0 to SizeOf(pricePlanArrayInfo) do
+  begin
+     pricePlanArrayInfo[i]:= TPricePlan.Create();
+     pricePlanArrayInfo[i].energySupplier:=GetEnumName(TypeInfo(TSupplier), i);
+     pricePlanArrayInfo[i].unitRate:=(i+1)*(i+2);
+  end;
 end;
 
-function GetConsumptionCostOfElectricityReadingsForEachPricePlan(smartMeterId: String): TCostPerPricePlan;
+function GetConsumptionCostOfElectricityReadingsForEachPricePlan(smartMeterId: String): TSupplierToCost;
 begin
+   // get readings by smartMeterId
 
+   // cycle price plan
+
+   // return
 end;
 
-function RecommendCheapestPricePlans(smartMeterId: String; limit: Integer): TCostPerPricePlan;
+function RecommendCheapestPricePlans(smartMeterId: String; limit: Integer): TSupplierToCost;
 begin
+   // get readings by smartMeterId
 
+   // cycle price plan
+
+   // return limit
 end;
 
 function CalculateAverageReading(electricityReadingsArray: TElectricityReadingsArray): Double;

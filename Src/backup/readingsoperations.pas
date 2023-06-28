@@ -32,6 +32,7 @@ type
     BtnSaveReadings: TButton;
     CboxSmartMetersList: TComboBox;
     dtkReadingDate: TDateTimePicker;
+    SaveReadingGroupBox: TGroupBox;
     TxtReading: TEdit;
     SmartMeterId: TLabel;
     Reading: TLabel;
@@ -57,7 +58,7 @@ const
 procedure InitData();
 implementation
 uses
-  Main;
+  Main, ConstData;
 
 {$R *.lfm}
 
@@ -74,7 +75,7 @@ procedure WriteData(mReadings: TMeterReadingsArray);
 var
   fs: TFileStream;
 begin
-  fs:= TFileStream.Create('Readings1.dat', fmCreate);
+  fs:= TFileStream.Create(REC_FILE_NAME, fmCreate);
   try
     fs.WriteBuffer(mReadings, SizeOf(mReadings));
   finally
@@ -86,7 +87,7 @@ procedure ReadData(var mReadings: TMeterReadingsArray);
 var
   fs: TFileStream;
 begin
-  fs:= TFileStream.Create('Readings1.dat', fmOpenRead or fmShareDenyWrite);
+  fs:= TFileStream.Create(REC_FILE_NAME, fmOpenRead or fmShareDenyWrite);
   try
     fs.ReadBuffer(mReadings, SizeOf(mReadings));
   finally
@@ -121,7 +122,7 @@ begin
   for i:= 0 to 4 do
   begin
     MeterReadingArray[i]:= MeterReadings.Create();
-    MeterReadingArray[i].smartMeterId:='SmertMeterId' + IntToStr(i+1);
+    MeterReadingArray[i].smartMeterId:=ConstData.SmartMeterIds[i];
     MeterReadingArray[i].ElectricityReadings:=GenerateReadings(20);
   end;
 
@@ -136,6 +137,7 @@ begin
   begin
      CboxSmartMetersList.Items.AddObject(mReadings[i].smartMeterId, TObject(mReadings[i].smartMeterId));
   end;
+  CboxSmartMetersList.ItemIndex:=1;
 end;
 
 procedure InitData();
@@ -171,6 +173,7 @@ procedure TFormReadingsOperations.BtnShowReadingsClick(Sender: TObject);
 var
   i: Integer;
   j: Integer;
+  title: string;
 begin
   MemoReadingsDetails.Clear;
   ReadData(MeterReadingsArray);
@@ -180,9 +183,14 @@ begin
     begin
       if j = 0 then
       begin
-         MemoReadingsDetails.Append('----------------------');
+         MemoReadingsDetails.Append('-----------------------------------------------------');
+         title:='SmartMeterId: ' + MeterReadingsArray[i].smartMeterId;
+      end
+      else
+      begin
+        title:='                                            ';
       end;
-      MemoReadingsDetails.Append('SmartMeterId: ' + MeterReadingsArray[i].smartMeterId +
+      MemoReadingsDetails.Append(title +
       ' --- Reading: ' + FloatToStr(MeterReadingsArray[i].ElectricityReadings[j].reading) + ' ' + MeterReadingsArray[i].ElectricityReadings[j].time);
     end;
   end;

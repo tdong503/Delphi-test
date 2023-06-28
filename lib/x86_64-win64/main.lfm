@@ -1,5 +1,5 @@
 object JOIEnergyForm: TJOIEnergyForm
-  Left = 948
+  Left = 803
   Height = 500
   Top = 264
   Width = 765
@@ -19,7 +19,7 @@ object JOIEnergyForm: TJOIEnergyForm
     TabOrder = 0
   end
   object BtnCompareAll: TButton
-    Left = 34
+    Left = 200
     Height = 33
     Top = 373
     Width = 158
@@ -28,18 +28,18 @@ object JOIEnergyForm: TJOIEnergyForm
     TabOrder = 1
   end
   object BtnRecomand: TButton
-    Left = 34
+    Left = 200
     Height = 33
-    Top = 416
+    Top = 424
     Width = 158
     Caption = 'Recomand'
     OnClick = BtnRecomandClick
     TabOrder = 2
   end
   object TxtRecomandCount: TEdit
-    Left = 200
+    Left = 94
     Height = 25
-    Top = 424
+    Top = 432
     Width = 40
     TabOrder = 3
     Text = '0'
@@ -53,5 +53,14 @@ object JOIEnergyForm: TJOIEnergyForm
     Color = clMenuHighlight
     OnClick = BtnGoToReadingsClick
     TabOrder = 4
+  end
+  object CboxSmartMetersList: TComboBox
+    Left = 32
+    Height = 25
+    Top = 376
+    Width = 144
+    ItemHeight = 17
+    TabOrder = 5
+    Text = 'CboxSmartMetersList'
   end
 end
